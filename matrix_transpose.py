@@ -7,11 +7,5 @@ for i in range(R):
     for j in range(C):
         a.append(int(input()))
     matrix.append(a)
-swap = 0
-for i in range(R):
-    for j in range(C):
-        if i<j:
-            swap = matrix[i][j]
-            matrix[i][j]=matrix[j][i]
-            matrix[j][i]=swap
-print(matrix)
+transpose  = [list(row) for row in zip(*matrix)]
+print(transpose)
